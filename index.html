@@ -1,214 +1,76 @@
 <!DOCTYPE html>
-
-<html lang="pt-BR"><head>
+<html lang="pt-BR">
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Diego Sousa | Web Designer Profissional</title>
-<!-- BEGIN: External Scripts -->
+
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              red: '#800020',
-              black: '#0f172a',
-              light: '#f8fafc',
-              border: '#f8d7da'
-            }
-          },
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-          }
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        brand: {
+          red: '#800020',
+          black: '#0f172a',
+          light: '#f8fafc',
+          border: '#f8d7da'
         }
+      },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
       }
     }
-  </script>
-<!-- END: External Scripts -->
-<style data-purpose="custom-animations">
-    @keyframes float {
-      0% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
-      100% { transform: translateY(0px); }
-    }
-    .animate-float {
-      animation: float 3s ease-in-out infinite;
-    }
-    .gradient-text {
-      color: #800020;
-    }
-    .glass-card {
-      background: #ffffff;
-      border: 1px solid #f8d7da;
-      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
-    }
-  </style>
+  }
+}
+</script>
+
+<style>
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+.animate-float { animation: float 3s ease-in-out infinite; }
+.gradient-text { color: #800020; }
+.glass-card {
+  background: #ffffff;
+  border: 1px solid #f8d7da;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+}
+</style>
 </head>
+
 <body class="bg-white text-slate-900 selection:bg-[#800020] selection:text-white">
-<!-- BEGIN: Hero Section -->
+
 <header class="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
-<!-- Background Accents -->
-<div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-brand-red/5 blur-[120px] rounded-full"></div>
-<div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-brand-red/5 blur-[120px] rounded-full"></div>
+
 <div class="max-w-4xl w-full text-center z-10">
-<div class="mb-6 inline-block px-4 py-1 rounded-full border border-brand-red/30 bg-brand-red/5 text-brand-red text-sm font-medium tracking-wide">
-        DESIGN PREMIUM &amp; ESTRATÉGICO
-      </div>
-<h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-8 text-brand-black">Seu negócio está <span class="gradient-text">se afogando no raso</span></h1>
+
+<h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-8 text-brand-black">
+Seu negócio está <span class="gradient-text">se afogando no raso</span>
+</h1>
+
+<!-- IMAGEM ADICIONADA AQUI -->
+<img src="imagens.jpeg" alt="Apresentação do trabalho"
+class="mx-auto mt-10 mb-10 rounded-2xl shadow-2xl w-full max-w-3xl">
+
 <p class="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-        Sou Diego Sousa, web designer focado em criar experiências digitais de alto impacto que transformam visitantes em clientes reais.
-      </p>
+Sou Diego Sousa, web designer focado em criar experiências digitais de alto impacto que transformam visitantes em clientes reais.
+</p>
+
 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-<a class="w-full sm:w-auto px-8 py-4 bg-brand-black text-white font-bold rounded-xl hover:bg-slate-800 hover:scale-105 transition-all text-center" data-purpose="cta-whatsapp" href="https://wa.me/5598984687854" rel="noopener noreferrer" target="_blank">
-          Falar no WhatsApp
-        </a>
-<a class="w-full sm:w-auto px-8 py-4 border border-slate-200 bg-white hover:bg-slate-50 transition-colors rounded-xl text-center text-slate-900" data-purpose="cta-instagram" href="https://www.instagram.com/_diego_sousa09" rel="noopener noreferrer" target="_blank">
-          Ver meu Instagram
-        </a>
+<a class="w-full sm:w-auto px-8 py-4 bg-brand-black text-white font-bold rounded-xl hover:bg-slate-800 hover:scale-105 transition-all text-center" href="https://wa.me/5598984687854" target="_blank">
+Falar no WhatsApp
+</a>
+<a class="w-full sm:w-auto px-8 py-4 border border-slate-200 bg-white hover:bg-slate-50 transition-colors rounded-xl text-center text-slate-900" href="https://www.instagram.com/_diego_sousa09" target="_blank">
+Ver meu Instagram
+</a>
 </div>
-</div>
-<!-- Scroll Indicator -->
-<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-30 text-brand-red">
-<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 14l-7 7m0 0l-7-7m7 7V3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+
 </div>
 </header>
-<!-- END: Hero Section -->
-<!-- BEGIN: Problem Section -->
-<section class="py-24 px-6 bg-slate-50" id="why-a-site">
-<div class="max-w-4xl mx-auto text-center">
-<h2 class="text-3xl md:text-4xl font-bold mb-6 text-brand-black">Por que um site é essencial?</h2>
-<p class="text-slate-600 text-lg leading-relaxed mb-12">
-        Negócios sem presença digital sólida são vistos como menos profissionais. Sem um site próprio, você depende apenas de algoritmos das redes sociais e deixa de passar a confiança necessária para fechar grandes negócios.
-      </p>
-<div class="grid md:grid-cols-2 gap-8 text-left">
-<div class="glass-card p-8 rounded-2xl border-brand-red/20">
-<div class="text-brand-red mb-4">
-<svg class="w-10 h-10" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
-</div>
-<h3 class="text-xl font-bold mb-3 text-brand-black">Risco de invisibilidade</h3>
-<p class="text-slate-600">Se o seu cliente te procura no Google e não te encontra, ele vai encontrar o seu concorrente.</p>
-</div>
-<div class="glass-card p-8 rounded-2xl border-brand-red/20">
-<div class="text-brand-red mb-4">
-<svg class="w-10 h-10" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
-</div>
-<h3 class="text-xl font-bold mb-3 text-brand-black">Falta de autoridade</h3>
-<p class="text-slate-600">Um perfil no Instagram não substitui a seriedade e a estrutura de um domínio profissional exclusivo.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- END: Problem Section -->
-<!-- BEGIN: Benefits Section -->
-<section class="py-24 px-6 overflow-hidden">
-<div class="max-w-6xl mx-auto">
-<div class="text-center mb-16">
-<h2 class="text-3xl md:text-5xl font-bold mb-4 text-brand-black">O que um site profissional entrega</h2>
-<div class="h-1 w-24 bg-brand-red mx-auto rounded-full"></div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<!-- Benefit 1 -->
-<div class="p-8 rounded-3xl border border-slate-100 hover:border-brand-red/30 transition-colors bg-slate-50">
-<div class="text-brand-red font-black text-4xl mb-6 opacity-20">01</div>
-<h4 class="text-xl font-bold mb-3 text-brand-black">Aparecer no Google</h4>
-<p class="text-slate-600 text-sm">Seja encontrado exatamente por quem está procurando o seu serviço agora.</p>
-</div>
-<!-- Benefit 2 -->
-<div class="p-8 rounded-3xl border border-slate-100 hover:border-brand-red/30 transition-colors bg-slate-50">
-<div class="text-brand-red font-black text-4xl mb-6 opacity-20">02</div>
-<h4 class="text-xl font-bold mb-3 text-brand-black">Passar mais confiança</h4>
-<p class="text-slate-600 text-sm">Transmita profissionalismo imediato e segurança para o seu potencial cliente.</p>
-</div>
-<!-- Benefit 3 -->
-<div class="p-8 rounded-3xl border border-slate-100 hover:border-brand-red/30 transition-colors bg-slate-50">
-<div class="text-brand-red font-black text-4xl mb-6 opacity-20">03</div>
-<h4 class="text-xl font-bold mb-3 text-brand-black">Atrair clientes 24h</h4>
-<p class="text-slate-600 text-sm">Seu site trabalha enquanto você dorme, captando leads a qualquer hora do dia.</p>
-</div>
-<!-- Benefit 4 -->
-<div class="p-8 rounded-3xl border border-slate-100 hover:border-brand-red/30 transition-colors bg-slate-50">
-<div class="text-brand-red font-black text-4xl mb-6 opacity-20">04</div>
-<h4 class="text-xl font-bold mb-3 text-brand-black">Aumentar vendas</h4>
-<p class="text-slate-600 text-sm">Um funil de vendas otimizado para converter cliques em faturamento real.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- END: Benefits Section -->
-<!-- BEGIN: How It Works -->
-<section class="py-24 px-6 bg-slate-50">
-<div class="max-w-4xl mx-auto">
-<h2 class="text-3xl md:text-4xl font-bold mb-16 text-center text-brand-black">Processo Simples e Eficiente</h2>
-<div class="space-y-12 relative">
-<!-- Vertical Line Decor -->
-<div class="absolute left-[15px] md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-brand-red/20 via-brand-red/50 to-brand-red/20 hidden md:block"></div>
-<!-- Step 1 -->
-<div class="flex flex-col md:flex-row items-center gap-8 relative">
-<div class="flex-1 md:text-right">
-<h3 class="text-xl font-bold text-brand-red">01. Contato pelo WhatsApp</h3>
-<p class="text-slate-600">Conversamos sobre suas necessidades e objetivos.</p>
-</div>
-<div class="w-8 h-8 rounded-full bg-brand-red z-10 hidden md:block border-4 border-white"></div>
-<div class="flex-1"></div>
-</div>
-<!-- Step 2 -->
-<div class="flex flex-col md:flex-row-reverse items-center gap-8 relative">
-<div class="flex-1 text-left">
-<h3 class="text-xl font-bold text-brand-red">02. Entendimento do negócio</h3>
-<p class="text-slate-600">Analiso seu mercado para criar uma estratégia personalizada.</p>
-</div>
-<div class="w-8 h-8 rounded-full bg-brand-red z-10 hidden md:block border-4 border-white"></div>
-<div class="flex-1"></div>
-</div>
-<!-- Step 3 -->
-<div class="flex flex-col md:flex-row items-center gap-8 relative">
-<div class="flex-1 md:text-right">
-<h3 class="text-xl font-bold text-brand-red">03. Criação do site</h3>
-<p class="text-slate-600">Desenvolvo o design e a funcionalidade focados em conversão.</p>
-</div>
-<div class="w-8 h-8 rounded-full bg-brand-red z-10 hidden md:block border-4 border-white"></div>
-<div class="flex-1"></div>
-</div>
-<!-- Step 4 -->
-<div class="flex flex-col md:flex-row-reverse items-center gap-8 relative">
-<div class="flex-1 text-left">
-<h3 class="text-xl font-bold text-brand-red">04. Entrega do site pronto</h3>
-<p class="text-slate-600">Seu site no ar, pronto para atrair e converter clientes.</p>
-</div>
-<div class="w-8 h-8 rounded-full bg-brand-red z-10 hidden md:block border-4 border-white"></div>
-<div class="flex-1"></div>
-</div>
-</div>
-</div>
-</section>
-<!-- END: How It Works -->
-<!-- BEGIN: Final CTA -->
-<section class="py-24 px-6 text-center relative overflow-hidden">
-<div class="absolute inset-0 bg-brand-red/5 pointer-events-none"></div>
-<div class="max-w-4xl mx-auto relative z-10">
-<h2 class="text-4xl md:text-6xl font-black mb-8 text-brand-black">Pronto para elevar o nível do seu negócio?</h2>
-<p class="text-xl text-slate-600 mb-12">Não deixe para amanhã o crescimento que um site profissional pode trazer hoje.</p>
-<a class="inline-flex items-center gap-4 px-10 py-6 bg-brand-black hover:bg-slate-800 text-white font-black text-2xl rounded-2xl shadow-2xl shadow-black/10 hover:scale-105 transition-all" href="https://wa.me/5598984687854" rel="noopener noreferrer" target="_blank">
-<svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
-        ligeiro otario kk
-      </a>
-</div>
-</section>
-<!-- END: Final CTA -->
-<!-- BEGIN: Footer -->
-<footer class="py-12 border-t border-slate-100 text-center bg-white">
-<div class="max-w-4xl mx-auto px-6">
-<div class="text-2xl font-bold mb-4 tracking-tighter text-brand-black">
-        Diego <span class="text-brand-red">Sousa</span>
-</div>
-<p class="text-slate-400 text-sm">Web Designer — Todos os direitos reservados © 2024</p>
-</div>
-</footer>
-<!-- END: Footer -->
-<!-- BEGIN: Floating WhatsApp -->
-<a aria-label="Falar no WhatsApp" class="fixed bottom-6 right-6 w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl z-50 hover:scale-110 active:scale-95 transition-all animate-float" href="https://wa.me/5598984687854" rel="noopener noreferrer" target="_blank">
-<svg class="w-10 h-10" fill="currentColor" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
-</a>
-<!-- END: Floating WhatsApp -->
-</body></html>
+
+</body>
+</html>
