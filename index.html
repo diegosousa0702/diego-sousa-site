@@ -1,76 +1,141 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Diego Sousa | Web Designer Profissional</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Sua Agência Digital</title>
 
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        brand: {
-          red: '#800020',
-          black: '#0f172a',
-          light: '#f8fafc',
-          border: '#f8d7da'
-        }
-      },
-      fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-      }
-    }
-  }
-}
-</script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#0f0f0f;color:#fff;overflow-x:hidden}
+
+header{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(45deg,#0f0f0f,#1c1c1c);
 }
-.animate-float { animation: float 3s ease-in-out infinite; }
-.gradient-text { color: #800020; }
-.glass-card {
-  background: #ffffff;
-  border: 1px solid #f8d7da;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+
+h1{
+font-size:3rem;
+animation:fadeDown 1.2s ease forwards;
+opacity:0;
+}
+
+p{
+margin-top:20px;
+font-size:1.2rem;
+max-width:600px;
+animation:fadeUp 1.5s ease forwards;
+opacity:0;
+}
+
+button{
+margin-top:30px;
+padding:15px 35px;
+border:none;
+background:#25D366;
+color:#000;
+font-weight:700;
+font-size:1rem;
+border-radius:50px;
+cursor:pointer;
+transition:0.3s;
+animation:fadeUp 1.8s ease forwards;
+opacity:0;
+}
+
+button:hover{
+transform:scale(1.1);
+}
+
+section{
+padding:80px 20px;
+text-align:center;
+}
+
+.cards{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+margin-top:40px;
+}
+
+.card{
+background:#1b1b1b;
+padding:30px;
+width:280px;
+border-radius:15px;
+transition:0.4s;
+opacity:0;
+transform:translateY(50px);
+}
+
+.card.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+footer{
+padding:40px;
+text-align:center;
+background:#111;
+}
+
+@keyframes fadeDown{
+to{opacity:1;transform:translateY(0)}
+from{opacity:0;transform:translateY(-40px)}
+}
+
+@keyframes fadeUp{
+to{opacity:1;transform:translateY(0)}
+from{opacity:0;transform:translateY(40px)}
 }
 </style>
 </head>
+<body>
 
-<body class="bg-white text-slate-900 selection:bg-[#800020] selection:text-white">
-
-<header class="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
-
-<div class="max-w-4xl w-full text-center z-10">
-
-<h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-8 text-brand-black">
-Seu negócio está <span class="gradient-text">se afogando no raso</span>
-</h1>
-
-<!-- IMAGEM ADICIONADA AQUI -->
-<img src="imagens.jpeg" alt="Apresentação do trabalho"
-class="mx-auto mt-10 mb-10 rounded-2xl shadow-2xl w-full max-w-3xl">
-
-<p class="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-Sou Diego Sousa, web designer focado em criar experiências digitais de alto impacto que transformam visitantes em clientes reais.
-</p>
-
-<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-<a class="w-full sm:w-auto px-8 py-4 bg-brand-black text-white font-bold rounded-xl hover:bg-slate-800 hover:scale-105 transition-all text-center" href="https://wa.me/5598984687854" target="_blank">
-Falar no WhatsApp
-</a>
-<a class="w-full sm:w-auto px-8 py-4 border border-slate-200 bg-white hover:bg-slate-50 transition-colors rounded-xl text-center text-slate-900" href="https://www.instagram.com/_diego_sousa09" target="_blank">
-Ver meu Instagram
-</a>
-</div>
-
-</div>
+<header>
+<h1>Sites Profissionais e Automação de WhatsApp</h1>
+<p>Eu crio sites modernos e automatizo o atendimento do seu WhatsApp para você vender todos os dias no automático.</p>
+<button onclick="window.location.href='https://wa.me/5599999999999'">Falar no WhatsApp</button>
 </header>
+
+<section>
+<h2>O que eu faço pelo seu negócio</h2>
+<div class="cards">
+<div class="card">Criação de Sites Modernos</div>
+<div class="card">Automação de WhatsApp com IA</div>
+<div class="card">Integração com Pagamentos</div>
+</div>
+</section>
+
+<footer>
+© 2026 Sua Agência Digital
+</footer>
+
+<script>
+const cards = document.querySelectorAll('.card');
+
+window.addEventListener('scroll', () => {
+cards.forEach(card => {
+const cardTop = card.getBoundingClientRect().top;
+if(cardTop < window.innerHeight - 100){
+card.classList.add('show');
+}
+});
+});
+</script>
 
 </body>
 </html>
